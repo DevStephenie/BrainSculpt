@@ -1,8 +1,10 @@
 node_modules/
 .expo/
 dist/
+__snapshots__/
 npm-debug.*
 *.jks
+*.test.js
 *.p8
 *.p12
 *.key
