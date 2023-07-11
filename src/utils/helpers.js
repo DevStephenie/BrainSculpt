@@ -1,0 +1,1 @@
+export const flex = 'flex justify-center items-center '

@@ -1,20 +1,33 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import { initializeApp } from 'firebase/app';
+// import { firebaseConfig } from './config/firebaseConfig'; // Your Firebase configuration
+// Initialize Firebase
+// initializeApp(firebaseConfig);
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+import React from "react";
+import { Text } from "react-native";
+import { Provider } from "react-redux";
+import { NavigationContainer } from "@react-navigation/native";
+import { NativeWindStyleSheet } from "nativewind";
+import { useFonts } from "expo-font";
+import store from "./src/reducers/store";
+import { AuthNavigator } from "./src/navigations";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+NativeWindStyleSheet.setOutput({
+  default: "native",
 });
+
+const App = () => {
+  const [loaded] = useFonts({
+    openSans: require("./src/assets/font/openSans.ttf"),
+  });
+
+  return (
+    <Provider store={store}>
+      <NavigationContainer>
+        <AuthNavigator style={{ fontFamily: "openSans" }} />
+      </NavigationContainer>
+    </Provider>
+  );
+};
+
+export default App;
