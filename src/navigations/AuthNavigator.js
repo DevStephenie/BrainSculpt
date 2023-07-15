@@ -16,7 +16,7 @@ const AuthNavigator = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Login"
+      // initialRouteName="Login"
     >
       <Stack.Screen name="Home" component={BottomTabNavigator} />
       <Stack.Screen name="Login" component={LoginScreen} />

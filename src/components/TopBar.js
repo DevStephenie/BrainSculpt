@@ -1,8 +1,9 @@
-import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Ionicons } from "@expo/vector-icons";
 
-const Header = ({ title }) => {
+const Header = ({ title, noBack }) => {
   const navigation = useNavigation();
 
   const handleBackPress = () => {
@@ -10,14 +11,15 @@ const Header = ({ title }) => {
   };
 
   return (
-    <View className=' w-full flex flex-row justify-start items-center p-4 bg-blue'>
-      <TouchableOpacity onPress={handleBackPress} className='mr-2'>
-        <Text className='text-lg font-bold text-base-white'>{'<'}</Text>
-      </TouchableOpacity>
-      <Text className='text-lg font-bold text-base-white'>{title}</Text>
+    <View className=" w-full flex flex-row justify-start items-center p-4 bg-blue">
+      {!noBack && (
+        <TouchableOpacity onPress={handleBackPress} className="mr-2 my-auto">
+          <Ionicons name="chevron-back-outline" size={18} color="#F8FBFF" />
+        </TouchableOpacity>
+      )}
+      <Text className="text-lg font-bold text-base-white my-auto">{title}</Text>
     </View>
   );
 };
-
 
 export default Header;

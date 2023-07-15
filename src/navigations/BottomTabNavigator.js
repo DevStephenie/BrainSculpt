@@ -3,7 +3,7 @@ import { AntDesign, Ionicons, FontAwesome5, Entypo } from "@expo/vector-icons";
 import { HomeScreen } from "../screens";
 import { BalancersEntry } from "../screens/balancers";
 import { MoreEntry } from "../screens/more";
-import { TrainingEntry } from "../screens/learn";
+import { LearnNavigator } from ".";
 
 const Tab = createBottomTabNavigator();
 
@@ -21,6 +21,15 @@ export default function BottomTabNavigator() {
       }}
     >
       <Tab.Screen
+        name="TrainingEntry"
+        component={LearnNavigator}
+        options={{
+          tabBarIcon: ({ color, size }) => {
+            return <Ionicons name="book-outline" size={24} color={color} />;
+          },
+        }}
+      />
+      <Tab.Screen
         name="HomeScreen"
         component={HomeScreen}
         options={{
@@ -35,15 +44,6 @@ export default function BottomTabNavigator() {
         options={{
           tabBarIcon: ({ color, size }) => {
             return <FontAwesome5 name="yin-yang" size={24} color={color} />;
-          },
-        }}
-      />
-      <Tab.Screen
-        name="TrainingEntry"
-        component={TrainingEntry}
-        options={{
-          tabBarIcon: ({ color, size }) => {
-            return <Ionicons name="book-outline" size={24} color={color} />;
           },
         }}
       />

@@ -11,7 +11,7 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-
+git_auth.txt
 # macOS
 .DS_Store
 

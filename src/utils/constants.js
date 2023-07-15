@@ -9,6 +9,11 @@ import library from "../assets/library.jpg";
 import message from "../assets/message.jpg";
 import stressedDog from "../assets/stressed_dog.jpg";
 import youtube from "../assets/youtube.jpg";
+import {
+  Ionicons,
+  MaterialCommunityIcons,
+  MaterialIcons,
+} from "@expo/vector-icons";
 
 export const FONTFAMILY = {
   openSans: { fontFamily: "openSans" },
@@ -18,22 +23,231 @@ export const trainings = [
   {
     image: bulb,
     title: "Tribe",
-    to: "tribe",
+    to: "Tribe",
+    content: [
+      {
+        image: fallingBooks,
+        title: "Tutorials",
+        to: "Tutorials",
+      },
+      {
+        image: bulb,
+        title: "Meditations",
+        to: "Meditations",
+        content: [
+          {
+            icon: <Ionicons name="newspaper" size={42} color="#2AB1FA" />,
+            title: "2-5 Mins",
+            to: "TwoFiveMeditations",
+            content: [
+              {
+                title: "Meditation 1",
+                lock: false,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+            ],
+          },
+          {
+            icon: (
+              <MaterialCommunityIcons
+                name="head-plus"
+                size={42}
+                color="#2AB1FA"
+              />
+            ),
+            title: "5-10 Mins",
+            to: "FiveTenMeditations",
+            content: [
+              {
+                title: "Meditation 1",
+                lock: false,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+            ],
+          },
+          {
+            icon: <Ionicons name="flag" size={42} color="#2AB1FA" />,
+            title: "10-20 Mins",
+            to: "TenTwentyMeditations",
+            content: [
+              {
+                title: "Meditation 1",
+                lock: false,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+            ],
+          },
+          {
+            icon: (
+              <MaterialIcons name="model-training" size={42} color="#2AB1FA" />
+            ),
+            title: "Training Meditations",
+            to: "TrainingMeditations",
+            content: [
+              {
+                title: "Meditation 1",
+                lock: false,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+              {
+                title: "Meditation 2",
+                lock: true,
+                // to: "Meditations",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        image: bulb,
+        title: "Training",
+        to: "Training",
+        content: [
+          {
+            icon: <MaterialIcons name="newspaper" size={42} color="#2AB1FA" />,
+            title: "Parenting",
+            to: "Parenting",
+          },
+          {
+            icon: <Ionicons name="ios-rocket" size={42} color="#2AB1FA" />,
+            title: "Parenting",
+            to: "Parenting",
+          },
+          {
+            icon: <MaterialIcons name="head-plus" size={42} color="#2AB1FA" />,
+            title: "Performance/focus",
+            to: "Performance/focus",
+          },
+          {
+            icon: (
+              <MaterialCommunityIcons
+                name="check-decagram"
+                size={42}
+                color="#2AB1FA"
+              />
+            ),
+            title: "Leadership",
+            to: "Leadership",
+          },
+          {
+            icon: <Ionicons name="flag" size={42} color="#2AB1FA" />,
+            title: "Fit",
+            to: "Fit",
+          },
+          {
+            icon: <Ionicons name="fitness" size={42} color="#2AB1FA" />,
+            title: "Resiliance",
+            to: "Resiliance",
+          },
+        ],
+      },
+      {
+        image: bulb,
+        title: "Progress",
+        to: "Progress",
+      },
+      {
+        image: bulb,
+        title: "Workshop",
+        to: "Workshop",
+      },
+      {
+        image: bulb,
+        title: "iEMDR",
+        to: "iEMDR",
+      },
+    ],
   },
   {
     image: pro,
     title: "Professional",
     to: "Professional",
+    content: [
+      {
+        image: bulb,
+        title: "Tribe",
+        to: "tribe",
+      },
+    ],
   },
   {
     image: teen,
     title: "Teens",
     to: "teens",
+    content: [
+      {
+        image: bulb,
+        title: "Tribe",
+        to: "tribe",
+      },
+    ],
   },
   {
     image: children,
     title: "Children",
     to: "Children",
+    content: [
+      {
+        image: bulb,
+        title: "Tribe",
+        to: "tribe",
+      },
+    ],
   },
 ];
 

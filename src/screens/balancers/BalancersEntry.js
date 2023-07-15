@@ -5,7 +5,7 @@ import { BaseView, BtnFull, TopBar, Loader } from "../../components";
 const BalancersEntry = () => {
   return (
     <>
-      <TopBar title="connect" />
+      <TopBar title="connect" noBack={true}/>
       <BaseView>
         <NotConnected />
       </BaseView>

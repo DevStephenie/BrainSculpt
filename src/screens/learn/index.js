@@ -1,1 +1,2 @@
-export {default as TrainingEntry} from './TrainingEntry'
+export {default as TrainingScreen} from './TrainingScreen'
+export * from './tribe'
